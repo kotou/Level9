@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    display: block;
+  }
+  a:hover {
+    display: block;
+    background-color: #ccc;
+  }
+  .navigation>li:hover .hide {
+    display: block;
+  }
+  li {
+    list-style: none;
+  }
+  .navigation>li {
+    position: relative;
+    float: left;
+  }
+  .navigation {
+   background-color: #f1f1f1;
+
+ }
+ nav {
+  width: 600px;
+  margin: 8px auto 0px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navigation::after {
+ content: '';
+ clear: both;
+ display: block;
+}
+.hide {
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  min-width: 160px;
+  display: none;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="navigation">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">作品</a></li>
+      <li>
+        <a href="#">更多</a>
+        <ul class="hide">
+          <li><a href="">GitHub</a></li>
+          <li><a href="">博客</a></li>
+          <li><a href="">知乎</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
